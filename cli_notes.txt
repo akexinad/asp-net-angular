@@ -1,7 +1,12 @@
 To create a new app with aspnet:
-
 > dotnet new webapi -o DatingApp.API -n DatingApp.API
 
 where:
 - -o = output
 - -n = name
+
+Creating a migration:
+> dotnet ef migrations add InitialCreate:
+
+Apply a migration from the made migration class AND create the database for you:
+> dotnet ef database update
