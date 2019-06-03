@@ -1,0 +1,7 @@
+To create a new app with aspnet:
+
+> dotnet new webapi -o DatingApp.API -n DatingApp.API
+
+where:
+- -o = output
+- -n = name
