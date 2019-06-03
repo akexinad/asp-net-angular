@@ -1,4 +1,5 @@
 .vscode
+cli_notes.txt
 bin
 obj
 *.db 
