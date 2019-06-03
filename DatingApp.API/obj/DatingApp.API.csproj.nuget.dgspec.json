@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\code\\udemy\\cummings\\dot_net_angular\\DatingApp.API\\DatingApp.API.csproj": {}
+    "D:\\code\\udemy\\cummings\\dot_net_angular\\DatingApp.API\\DatingApp.API.csproj": {}
   },
   "projects": {
-    "d:\\code\\udemy\\cummings\\dot_net_angular\\DatingApp.API\\DatingApp.API.csproj": {
+    "D:\\code\\udemy\\cummings\\dot_net_angular\\DatingApp.API\\DatingApp.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\code\\udemy\\cummings\\dot_net_angular\\DatingApp.API\\DatingApp.API.csproj",
+        "projectUniqueName": "D:\\code\\udemy\\cummings\\dot_net_angular\\DatingApp.API\\DatingApp.API.csproj",
         "projectName": "DatingApp.API",
-        "projectPath": "d:\\code\\udemy\\cummings\\dot_net_angular\\DatingApp.API\\DatingApp.API.csproj",
+        "projectPath": "D:\\code\\udemy\\cummings\\dot_net_angular\\DatingApp.API\\DatingApp.API.csproj",
         "packagesPath": "C:\\Users\\danny\\.nuget\\packages\\",
-        "outputPath": "d:\\code\\udemy\\cummings\\dot_net_angular\\DatingApp.API\\obj\\",
+        "outputPath": "D:\\code\\udemy\\cummings\\dot_net_angular\\DatingApp.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
