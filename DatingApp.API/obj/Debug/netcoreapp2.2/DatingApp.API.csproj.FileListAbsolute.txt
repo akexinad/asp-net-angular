@@ -12,3 +12,17 @@ D:\code\udemy\cummings\dot_net_angular\DatingApp.API\obj\Debug\netcoreapp2.2\Dat
 D:\code\udemy\cummings\dot_net_angular\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.RazorTargetAssemblyInfo.cache
 D:\code\udemy\cummings\dot_net_angular\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.dll
 D:\code\udemy\cummings\dot_net_angular\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.pdb
+C:\Users\cecd304\me\code\udemy\cummings\asp-net-angular\DatingApp.API\bin\Debug\netcoreapp2.2\DatingApp.API.deps.json
+C:\Users\cecd304\me\code\udemy\cummings\asp-net-angular\DatingApp.API\bin\Debug\netcoreapp2.2\DatingApp.API.runtimeconfig.json
+C:\Users\cecd304\me\code\udemy\cummings\asp-net-angular\DatingApp.API\bin\Debug\netcoreapp2.2\DatingApp.API.runtimeconfig.dev.json
+C:\Users\cecd304\me\code\udemy\cummings\asp-net-angular\DatingApp.API\bin\Debug\netcoreapp2.2\DatingApp.API.dll
+C:\Users\cecd304\me\code\udemy\cummings\asp-net-angular\DatingApp.API\bin\Debug\netcoreapp2.2\DatingApp.API.pdb
+C:\Users\cecd304\me\code\udemy\cummings\asp-net-angular\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.csprojAssemblyReference.cache
+C:\Users\cecd304\me\code\udemy\cummings\asp-net-angular\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.csproj.CoreCompileInputs.cache
+C:\Users\cecd304\me\code\udemy\cummings\asp-net-angular\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.RazorAssemblyInfo.cache
+C:\Users\cecd304\me\code\udemy\cummings\asp-net-angular\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.RazorAssemblyInfo.cs
+C:\Users\cecd304\me\code\udemy\cummings\asp-net-angular\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.AssemblyInfoInputs.cache
+C:\Users\cecd304\me\code\udemy\cummings\asp-net-angular\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.AssemblyInfo.cs
+C:\Users\cecd304\me\code\udemy\cummings\asp-net-angular\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.RazorTargetAssemblyInfo.cache
+C:\Users\cecd304\me\code\udemy\cummings\asp-net-angular\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.dll
+C:\Users\cecd304\me\code\udemy\cummings\asp-net-angular\DatingApp.API\obj\Debug\netcoreapp2.2\DatingApp.API.pdb
