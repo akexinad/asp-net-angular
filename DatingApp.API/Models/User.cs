@@ -6,7 +6,6 @@ namespace DatingApp.API.Models
         {
             this.Id = id;
             this.Username = username;
-
         }
         public int Id { get; set; }
         public int Username { get; set; }
