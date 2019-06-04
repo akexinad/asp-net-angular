@@ -21,6 +21,7 @@ namespace DatingApp.API.Controllers
             _context = context;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         // an IActionResult allows us to return http response status codes.
         public async Task<IActionResult> GetValues()
