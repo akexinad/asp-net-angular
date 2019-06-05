@@ -6,7 +6,9 @@ where:
 - -n = name
 
 Creating a migration:
-> dotnet ef migrations add InitialCreate:
+> dotnet ef migrations add [ADescriptionWithoutTheBrackets]:
 
-Apply a migration from the made migration class AND create the database for you:
+- Apply a migration from the made migration class.
+- This command will also create the database for you if you don't already have one.
+
 > dotnet ef database update
