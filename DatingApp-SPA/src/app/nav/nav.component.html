@@ -1,16 +1,17 @@
 <div class="container">
   <nav class="navbar navbar-expand-md navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">Imagine Zer0</a>
+    <a class="navbar-brand" [routerLink]="['/home']" >Imagine Zer0</a>
 
     <ul *ngIf="loggedIn()" class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Matches <span class="sr-only">(current)</span></a>
+      <!-- Adding routerlink to the li tag will ensure that the 'active' class is still applied -->
+      <li class="nav-item"  routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/members']" >Matches <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Lists</a>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/lists']" >Lists</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Messages</a>
+      <li class="nav-item"  routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/messages']" >Messages</a>
       </li>
     </ul>
 
@@ -38,9 +39,9 @@
       </div>
     </div>
 
-    <!-- EXAMPLE OF AN ANGULAR FORM  my-2 my-lg-0 -->
+    <!-- EXAMPLE OF AN ANGULAR FORM -->
     <form
-      class="form-inline ml-auto"
+      class="form-inline my-2 my-lg-0 ml-auto"
       *ngIf="!loggedIn()"
       #loginForm="ngForm"
       (ngSubmit)="login()"
