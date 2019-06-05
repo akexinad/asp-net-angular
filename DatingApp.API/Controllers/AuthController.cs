@@ -45,53 +45,44 @@ namespace DatingApp.API.Controllers
 
         [HttpPost("login")]
         public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
-        {
-            try
+        {   
+            throw new Exception("Computer says no!");
+
+            // Checking to see if username and password match the db entries.
+            var userFromRepo = await _repo.Login(userForLoginDto.Username.ToLower(), userForLoginDto.Password);
+
+            if (userFromRepo == null)
+                return Unauthorized();
+
+            // Each token needs two claims. One from the username and the other from the id.
+            var claims = new[]
             {
-                throw new Exception("Computer says no!");
+                new Claim(ClaimTypes.NameIdentifier, userFromRepo.Id.ToString()),
+                new Claim(ClaimTypes.Name, userFromRepo.Username)
+            };
 
-                // Checking to see if username and password match the db entries.
-                var userFromRepo = await _repo.Login(userForLoginDto.Username.ToLower(), userForLoginDto.Password);
+            // Then the system needs to sign the key in order to render it valid.
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config.GetSection("AppSettings:Token").Value));
 
-                if (userFromRepo == null)
-                    return Unauthorized();
+            var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
 
-                // Each token needs two claims. One from the username and the other from the id.
-                var claims = new[]
-                {
-                    new Claim(ClaimTypes.NameIdentifier, userFromRepo.Id.ToString()),
-                    new Claim(ClaimTypes.Name, userFromRepo.Username)
-                };
-
-                // Then the system needs to sign the key in order to render it valid.
-                var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config.GetSection("AppSettings:Token").Value));
-
-                var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
-
-                // Here is where we start creating the actual token.
-                var tokenDescriptor = new SecurityTokenDescriptor
-                {
-                    Subject = new ClaimsIdentity(claims),
-                    Expires = DateTime.Now.AddDays(1),
-                    SigningCredentials = credentials
-                };
-
-                // First we create the handler.
-                var tokenHandler = new JwtSecurityTokenHandler();
-
-                // Then we can create the token in its entirety.
-                var token = tokenHandler.CreateToken(tokenDescriptor);
-
-                return Ok(new {
-                    token = tokenHandler.WriteToken(token)
-                });
-            }
-            catch
+            // Here is where we start creating the actual token.
+            var tokenDescriptor = new SecurityTokenDescriptor
             {
-                return StatusCode(500, "Computer really says no!")
-            }
-            
+                Subject = new ClaimsIdentity(claims),
+                Expires = DateTime.Now.AddDays(1),
+                SigningCredentials = credentials
+            };
 
+            // First we create the handler.
+            var tokenHandler = new JwtSecurityTokenHandler();
+
+            // Then we can create the token in its entirety.
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+
+            return Ok(new {
+                token = tokenHandler.WriteToken(token)
+            });
         }
     }
 }
