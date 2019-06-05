@@ -28,18 +28,11 @@ export class NavComponent implements OnInit {
   }
 
   loggedIn() {
-    const token = localStorage.getItem('token');
-
-    if (!token) {
-      return false;
-    }
-
-    return true;
+    return this.authService.loggedIn();
   }
 
   logout() {
     localStorage.removeItem('token');
     this.alertify.message('logged out');
   }
-
 }
