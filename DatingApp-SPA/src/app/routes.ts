@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { ListsComponent } from './lists/lists.component';
 import { MemberListComponent } from './members/member-list/member-list.component';
 import { MessagesComponent } from './messages/messages.component';
+import { MemberDetailComponent } from './members/member-detail/member-detail.component';
 
 export const appRoutes: Routes = [
     // Remember, the wild card goes last so angular first checks the valid routes before reaching the wild card route.
@@ -15,7 +16,8 @@ export const appRoutes: Routes = [
         runGuardsAndResolvers: 'always',
         canActivate: [AuthGuard],
         children: [
-            { path: 'members', component: MemberListComponent, canActivate: [AuthGuard] },
+            { path: 'members', component: MemberListComponent},
+            { path: 'members/:id', component: MemberDetailComponent},
             { path: 'messages', component: MessagesComponent },
             { path: 'lists', component: ListsComponent },
         ]
