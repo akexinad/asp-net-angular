@@ -16,10 +16,11 @@ import { MessagesComponent } from './messages/messages.component';
 import { ListsComponent } from './lists/lists.component';
 import { MemberListComponent } from './member-list/member-list.component';
 
+import { appRoutes } from './routes';
 import { AuthService } from './_services/auth.service';
 import { ErrorInterceptorProvider } from './_services/error.interceptor';
 import { AlertifyService } from './_services/alertify.service';
-import { appRoutes } from './routes';
+import { UserService } from './_services/user.service';
 
 @NgModule({
    declarations: [
@@ -42,7 +43,8 @@ import { appRoutes } from './routes';
       AuthService,
       ErrorInterceptorProvider,
       AlertifyService,
-      AuthGuard
+      AuthGuard,
+      UserService
    ],
    bootstrap: [
       AppComponent
