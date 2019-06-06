@@ -35,5 +35,4 @@ export class MemberDetailComponent implements OnInit {
         this.alertify.error(error);
       });
   }
-
 }
