@@ -3,5 +3,9 @@
 }
 
 .bg-primary {
-    background-color: #7d9fa1 !important;
+    background-color: #16161d !important;
+}
+
+.navbar-img {
+    max-height: 2em;
 }
