@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "e3b0b7a2412c7a3e8ce1083dcfd3f1c3a1545630"
+    "signature": "0e0044426b40d56d479346cf43c707feaf5764a3"
   },
   "compilationOptions": {
     "defines": [
@@ -25,6 +25,7 @@
       "DatingApp.API/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "4.0.1",
+          "CloudinaryDotNet": "1.2.0",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "2.2.4",
@@ -64,6 +65,17 @@
         },
         "compile": {
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        }
+      },
+      "CloudinaryDotNet/1.2.0": {
+        "runtime": {
+          "lib/netstandard1.3/CloudinaryDotNet.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.3/CloudinaryDotNet.dll": {}
         }
       },
       "Microsoft.Data.Sqlite.Core/2.2.4": {
@@ -3449,6 +3461,13 @@
       "sha512": "sha512-Fhl+XDdcR2ogcqyHIeTB5fGCB58wTXOdpiqDI4sh/durRx8LJw+QJw2ZGLO3DIXTPvvnHM/t0DZy0vf0cdIGEg==",
       "path": "automapper.extensions.microsoft.dependencyinjection/4.0.1",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.4.0.1.nupkg.sha512"
+    },
+    "CloudinaryDotNet/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vDVJphErvptCVvDTaLnIs5yxWRmCA7nB2EOMiFK2+Yjc9aBL/InKvKgEQJtYJ08XfiwaPUkYcS1qVqCbMYTOcg==",
+      "path": "cloudinarydotnet/1.2.0",
+      "hashPath": "cloudinarydotnet.1.2.0.nupkg.sha512"
     },
     "Microsoft.Data.Sqlite.Core/2.2.4": {
       "type": "package",
