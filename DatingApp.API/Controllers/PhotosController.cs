@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -29,9 +30,9 @@ namespace DatingApp.API.Controllers
             IOptions<CloudinarySettings> cloudinaryConfig
         )
         {
-            _repo = repo;
-            _mapper = mapper;
             _cloudinaryConfig = cloudinaryConfig;
+            _mapper = mapper;
+            _repo = repo;
 
             Account acc = new Account(
                 _cloudinaryConfig.Value.CloudName,
@@ -59,7 +60,11 @@ namespace DatingApp.API.Controllers
                     var uploadParams = new ImageUploadParams()
                     {
                         File = new FileDescription(file.Name, stream),
-                        Transformation = new Transformation().Width(500).Height(500).Crop("fill").Gravity("face");
+                        Transformation = new Transformation()
+                            .Width(500)
+                            .Height(500)
+                            .Crop("fill")
+                            .Gravity("face")
                     };
 
                     uploadResult = _cloudinary.Upload(uploadParams);
@@ -81,7 +86,7 @@ namespace DatingApp.API.Controllers
                 return Ok();
             }
 
+            return BadRequest("Could not add the photo");
         }
-
     }
 }
