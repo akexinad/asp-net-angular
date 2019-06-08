@@ -6,6 +6,14 @@
     background-color: #16161d !important;
 }
 
-.navbar-img {
+.navbar-logo {
     max-height: 2em;
+}
+
+.navbar-main-photo {
+    max-height: 50px;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: inline;
+    margin-right: 10px;
 }
