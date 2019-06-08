@@ -46,3 +46,4 @@ testem.log
 Thumbs.db
 
 workshop
+../DatingApp.API/appsettings.json
