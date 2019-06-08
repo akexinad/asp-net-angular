@@ -21,7 +21,7 @@
       dropdown
     >
       <span>
-        <img class="navbar-main-photo" src="{{ authService.currentUser?.photoUrl }}">
+        <img class="navbar-main-photo" src="{{ photoUrl }}">
       </span>
       <a class="dropdown-toggle text-light" dropdownToggle>
         Welcome {{ authService.decodedToken?.unique_name | titlecase }}
