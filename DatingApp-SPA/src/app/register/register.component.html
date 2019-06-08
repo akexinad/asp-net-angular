@@ -1,5 +1,5 @@
 <form
-  #registerForm="ngForm"
+  [formGroup]="registerForm"
   (ngSubmit)="register()"
 >
   <h2 class="text-center text-primary">Sign Up</h2>
@@ -10,19 +10,25 @@
       type="text"
       class="form-control"
       placeholder="Username"
-      required
-      name="username"
-      [(ngModel)]="model.username"
+      formControlName="username"
     >
   </div>
 
   <div class="form-group">
     <input
-    type="password"
-    class="form-control"
-    placeholder="Password"
-    name="password"
-    [(ngModel)]="model.password"
+      type="password"
+      class="form-control"
+      placeholder="Password"
+      formControlName="password"
+    >
+  </div>
+
+  <div class="form-group">
+    <input
+      type="password"
+      class="form-control"
+      placeholder="Confirm Password"
+      formControlName="confirmPassword"
     >
   </div>
 
@@ -31,3 +37,6 @@
     <button class="btn btn-default" type="button" (click)="cancel()" >Cancel</button>
   </div>
 </form>
+
+<p>Form Value: {{ registerForm.value | json }}</p>
+<p>Form Value: {{ registerForm.status | json }}</p>
