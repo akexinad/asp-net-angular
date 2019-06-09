@@ -1,0 +1,7 @@
+.invalid-feedback {
+    color: red !important;
+}
+
+.ng-touched {
+    border-color: red !important;
+}
