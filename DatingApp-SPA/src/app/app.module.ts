@@ -53,7 +53,6 @@ export function tokenGetter() {
       BrowserModule,
       HttpClientModule,
       FormsModule,
-      // Already imported ReactiveFormsModule
       ReactiveFormsModule,
       BsDropdownModule.forRoot(),
       TabsModule.forRoot(),
