@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { BsDatepickerConfig } from 'ngx-bootstrap';
 
 import { AuthService } from '../_services/auth.service';
 import { AlertifyService } from '../_services/alertify.service';
@@ -12,10 +13,10 @@ import { AlertifyService } from '../_services/alertify.service';
 export class RegisterComponent implements OnInit {
   // Passing data from CHILD to PARENT requires @Output
   @Output() cancelRegister = new EventEmitter();
-
   model: any = {};
-
   registerForm: FormGroup;
+  // Adding partial makes all the default required params optional.
+  bsConfig: Partial<BsDatepickerConfig>;
 
   constructor(
     private authService: AuthService,
@@ -24,6 +25,9 @@ export class RegisterComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.bsConfig = {
+      containerClass: 'theme-green'
+    };
     this.createRegisterForm();
   }
 

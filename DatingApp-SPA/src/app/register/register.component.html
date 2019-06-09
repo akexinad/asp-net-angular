@@ -32,6 +32,8 @@
     </label>
   </div>
 
+  <!-- USERNAME -->
+  
   <div class="form-group">
     <input
       type="text"
@@ -46,6 +48,8 @@
     </div>
   </div>
 
+  <!-- KNOWN AS -->
+  
   <div class="form-group">
     <input
       [ngClass]="{'is-invalid': registerForm.get('knownAs').errors 
@@ -62,6 +66,8 @@
     </div>
   </div>
 
+  <!-- DATE OF BIRTH -->
+  
   <div class="form-group">
     <input
       [ngClass]="{'is-invalid': registerForm.get('dateOfBirth').errors 
@@ -69,7 +75,9 @@
       class="form-control"
       placeholder="Date of Birth"
       formControlName="dateOfBirth" 
-      type="date" 
+      type="date"
+      bsDatepicker
+      [bsConfig]="bsConfig"
     >
     <div 
       class="invalid-feedback" 
@@ -79,6 +87,8 @@
         Date of Birth is required
       </div>
   </div>
+
+  <!-- CITY -->
 
   <div class="form-group">
     <input
@@ -97,6 +107,8 @@
       </div>
   </div>
   
+  <!-- COUNTRY -->
+
   <div class="form-group">
     <input 
       [ngClass]="{'is-invalid': registerForm.get('country').errors 
@@ -113,6 +125,8 @@
         Country is required
       </div>
   </div>  
+
+  <!-- PASSWORD -->
 
   <div class="form-group">
     <input
@@ -146,6 +160,7 @@
     </div>
   </div>
 
+  <!-- PASSWORD CONFIRMATION -->
   <div class="form-group">
     <input
       type="password"
