@@ -33,7 +33,8 @@ namespace DatingApp.API.Controllers
             return Ok(usersToReturn);
         }
 
-        [HttpGet("{id}")]
+        // We give the route a name so we can reference it in other controller when we return a CreatedAtRoute at the end of a CRUD operation.
+        [HttpGet("{id}", Name = "GetUser")]
         public async Task<IActionResult> GetUser(int id)
         {
             var user = await _repo.GetUser(id);
