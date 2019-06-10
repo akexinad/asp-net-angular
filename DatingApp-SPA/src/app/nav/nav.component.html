@@ -1,6 +1,6 @@
 <div class="container">
   <nav class="navbar navbar-expand-md navbar-dark bg-primary">
-    <a class="navbar-brand" [routerLink]="['/home']" ><img class="navbar-img" src="assets/images/ll.png" alt="lendlease"></a>
+    <a class="navbar-brand" [routerLink]="['/home']" ><img class="navbar-logo" src="assets/images/ll.png" alt="lendlease"></a>
 
     <ul *ngIf="loggedIn()" class="navbar-nav mr-auto">
       <!-- Adding routerlink to the li tag will ensure that the 'active' class is still applied -->
@@ -20,6 +20,9 @@
       class="dropdown"
       dropdown
     >
+      <span>
+        <img class="navbar-main-photo" src="{{ photoUrl || '../../../../assets/images/user.png' }}">
+      </span>
       <a class="dropdown-toggle text-light" dropdownToggle>
         Welcome {{ authService.decodedToken?.unique_name | titlecase }}
       </a>

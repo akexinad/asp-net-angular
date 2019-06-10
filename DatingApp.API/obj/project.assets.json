@@ -12529,11 +12529,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\cecd304\\me\\code\\udemy\\cummings\\asp-net-angular\\DatingApp.API\\DatingApp.API.csproj",
+      "projectUniqueName": "C:\\Users\\cecd304\\me\\code\\udemy\\cummings\\asp-net-angular\\DatingApp.API\\DatingApp.API.csproj",
       "projectName": "DatingApp.API",
-      "projectPath": "c:\\Users\\cecd304\\me\\code\\udemy\\cummings\\asp-net-angular\\DatingApp.API\\DatingApp.API.csproj",
+      "projectPath": "C:\\Users\\cecd304\\me\\code\\udemy\\cummings\\asp-net-angular\\DatingApp.API\\DatingApp.API.csproj",
       "packagesPath": "C:\\Users\\cecd304\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\cecd304\\me\\code\\udemy\\cummings\\asp-net-angular\\DatingApp.API\\obj\\",
+      "outputPath": "C:\\Users\\cecd304\\me\\code\\udemy\\cummings\\asp-net-angular\\DatingApp.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
