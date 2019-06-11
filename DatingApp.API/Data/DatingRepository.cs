@@ -124,7 +124,7 @@ namespace DatingApp.API.Data
             return await _context.Messages.FirstOrDefaultAsync(m => m.Id == id);
         }
 
-        public Task<PagedList<Message>> GetMessageForUser()
+        public Task<PagedList<Message>> GetMessagesForUser(MessageParams messageParams)
         {
             throw new NotImplementedException();
         }
