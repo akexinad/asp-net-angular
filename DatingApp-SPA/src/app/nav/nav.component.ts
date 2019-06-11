@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 
 import { AuthService } from '../_services/auth.service';
 import { AlertifyService } from '../_services/alertify.service';
+import { User } from '../_models/user';
 
 @Component({
   selector: 'app-nav',
@@ -12,6 +13,7 @@ import { AlertifyService } from '../_services/alertify.service';
 export class NavComponent implements OnInit {
   model: any = {};
   photoUrl: string;
+  userId: string;
 
   constructor(
     public authService: AuthService,
@@ -21,6 +23,7 @@ export class NavComponent implements OnInit {
 
   ngOnInit() {
     this.authService.currentPhotoUrl.subscribe(photoUrl => this.photoUrl = photoUrl);
+    this.userId = this.authService.decodedToken.nameid;
   }
 
   login() {

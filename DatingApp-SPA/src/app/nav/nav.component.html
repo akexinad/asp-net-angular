@@ -21,7 +21,9 @@
       dropdown
     >
       <span>
-        <img class="navbar-main-photo" src="{{ photoUrl || '../../../../assets/images/user.png' }}">
+        <a [routerLink]="['/members/', userId]" >
+          <img class="navbar-main-photo" src="{{ photoUrl || '../../../../assets/images/user.png' }}">
+        </a>
       </span>
       <a class="dropdown-toggle text-light" dropdownToggle>
         Welcome {{ authService.decodedToken?.unique_name | titlecase }}
