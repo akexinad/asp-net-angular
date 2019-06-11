@@ -8,10 +8,11 @@ import { MemberDetailComponent } from './members/member-detail/member-detail.com
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
 
 import { AuthGuard } from './_guards/auth.guard';
+import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 import { MemberDetailResolver } from './_resolvers/member-detail.resolver';
 import { MemberListResolver } from './_resolvers/member-list.resolver';
 import { MemberEditResolver } from './_resolvers/member-edit.resolver';
-import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
+import { ListsResolver } from './_resolvers/lists.resolver';
 
 export const appRoutes: Routes = [
     // Remember, the wild card goes last so angular first checks the valid routes before reaching the wild card route.
@@ -43,7 +44,8 @@ export const appRoutes: Routes = [
             },
             {
                 path: 'lists',
-                component: ListsComponent
+                component: ListsComponent,
+                resolve: {users: ListsResolver}
             },
         ]
     },
