@@ -6,14 +6,12 @@ using DatingApp.API.Data;
 using DatingApp.API.Dtos;
 using DatingApp.API.Helpers;
 using DatingApp.API.Models;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DatingApp.API.Controllers
 {
 
     [ServiceFilter(typeof(LogUserActivity))]
-    [Authorize]
     [Route("api/users/{userId}/[controller]")]
     [ApiController]
     public class MessagesController : ControllerBase
@@ -60,7 +58,7 @@ namespace DatingApp.API.Controllers
             var messageToReturn = _mapper.Map<MessageForCreationDto>(message);
 
             if (await _repo.SaveAll())
-                return CreatedAtRoute("GetMessage", new {id = message.Id}, message);
+                return CreatedAtRoute("GetMessage", new {id = message.Id}, messageToReturn);
 
             throw new Exception("Creating the message failed on save");
         }
