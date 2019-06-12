@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 import { Message } from 'src/app/_models/message';
 
@@ -28,7 +28,7 @@ export class MemberMessagesComponent implements OnInit {
   loadMessages() {
     this.userService.getMessageThread(this.authService.decodedToken.nameid, this.recipientId)
       .subscribe(messages => {
-        this.messages = messages;
+        console.log(messages);
       }, error => {
         this.alertify.error(error);
       });
